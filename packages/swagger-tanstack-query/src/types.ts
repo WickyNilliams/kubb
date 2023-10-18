@@ -1,5 +1,5 @@
 import type { PluginFactoryOptions } from '@kubb/core'
-import type { Operation, ResolvePathOptions, SkipBy, AppMeta as SwaggerAppMeta } from '@kubb/swagger'
+import type { Operation, OverrideBy, ResolvePathOptions, SkipBy, AppMeta as SwaggerAppMeta } from '@kubb/swagger'
 
 export type Options = {
   /**
@@ -65,7 +65,8 @@ export type Options = {
    * Framework to be generated for
    * @default 'react'
    */
-  skipBy?: SkipBy[]
+  skipBy?: Array<SkipBy>
+  overrideBy?: Array<OverrideBy<Options>>
   framework?: Framework
   infinite?: {
     /**
